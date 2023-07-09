@@ -181,7 +181,7 @@ JSONObject ParseJson(const std::string& str)
                 // TODO: Make fast.
                 while (c == 'E' || c == 'e' || c == '-' || c == '+' || c == '.' || std::isdigit(c))
                 {
-                    if (c == '.')
+                    if (c == 'E' || c == 'e' || c == '.')
                     {
                         is_float = true;
                     }
