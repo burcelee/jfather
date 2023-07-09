@@ -173,13 +173,13 @@ JSONObject ParseJson(const std::string& str)
             break;
         }
         default:
-            if (c == '.' || std::isdigit(c))
+            if (c == 'E' || c == 'e' || c == '-' || c == '+' || c == '.' || std::isdigit(c))
             {
                 // Handling a number
                 std::stringstream ss;
                 bool is_float = false;
                 // TODO: Make fast.
-                while (c == '.' || std::isdigit(c))
+                while (c == 'E' || c == 'e' || c == '-' || c == '+' || c == '.' || std::isdigit(c))
                 {
                     if (c == '.')
                     {
